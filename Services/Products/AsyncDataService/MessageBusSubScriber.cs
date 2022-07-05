@@ -22,7 +22,8 @@ namespace Products.AsyncDataService
         }
         private void InitializeRabbitMQ()
         {
-            var factory=new ConnectionFactory(){HostName="localhost", Password = "moein.1379", UserName="guest", VirtualHost="/"};
+
+            var factory=new ConnectionFactory(){HostName=_configuration["RabbitMQHost"], Password = _configuration["Password"], UserName=_configuration["RabbitMQ:UserName"], VirtualHost="/"};
             _connection=factory.CreateConnection();
             _channel = _connection.CreateModel();
             _channel.ExchangeDeclare("trigger",ExchangeType.Direct);
