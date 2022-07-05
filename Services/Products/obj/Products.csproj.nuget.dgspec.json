@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\repos\\StoreMicroservice\\services\\products\\products.csproj": {}
+    "D:\\Projects\\repos\\StoreMicroservice\\Services\\Products\\Products.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\repos\\StoreMicroservice\\services\\products\\products.csproj": {
+    "D:\\Projects\\repos\\StoreMicroservice\\Services\\Products\\Products.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\repos\\StoreMicroservice\\services\\products\\products.csproj",
-        "projectName": "products",
-        "projectPath": "D:\\Projects\\repos\\StoreMicroservice\\services\\products\\products.csproj",
+        "projectUniqueName": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Products\\Products.csproj",
+        "projectName": "Products",
+        "projectPath": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Products\\Products.csproj",
         "packagesPath": "C:\\Users\\mrahm\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\repos\\StoreMicroservice\\services\\products\\obj\\",
+        "outputPath": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Products\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

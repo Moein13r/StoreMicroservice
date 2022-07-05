@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eIIKTxvr1h867J0nWtwXx9yOiCVYQ7vFZRCcaFC0yiBzxEellHMj5YoE1UAH8N0+mxdLeY3xgeJWQSWQYr7isg==",
+  "dgSpecHash": "tz0S38FeJxn5V66YsgpSBJ5E3Dp0jOw72BxmhyakBV4YhooMHa9PtLm2umPWTd1Kb0YsBQabB3kSblRKCdLrNg==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\repos\\StoreMicroservice\\services\\products\\products.csproj",
+  "projectFilePath": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Products\\Products.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrahm\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\mrahm\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
