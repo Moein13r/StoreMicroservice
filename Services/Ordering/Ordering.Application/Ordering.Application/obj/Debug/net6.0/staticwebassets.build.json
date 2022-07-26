@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "eTVBvbl0dgFUXWdZ0smBr6Oa3PUJxRKcTdEMIFffdpg=",
+  "Source": "Ordering.Application",
+  "BasePath": "_content/Ordering.Application",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  products.api:
+    restart: always
+    image: ${DOCKER_REGISTRY-}productsapi
+    build:
+      context: .
+      dockerfile: Services/Products/Dockerfile
+  

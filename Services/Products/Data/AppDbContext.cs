@@ -14,7 +14,7 @@ namespace Products.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>().Property(b => b.Name).IsRequired();
+            modelBuilder.Entity<Product>().Property(b => b.Name).IsRequired();            
         }
         public virtual DbSet<Product>? Products { get; set; }
     }

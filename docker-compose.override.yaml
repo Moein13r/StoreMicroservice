@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  products.api:
+    container_name: products.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development      
+    ports:
+      - "2112:80"

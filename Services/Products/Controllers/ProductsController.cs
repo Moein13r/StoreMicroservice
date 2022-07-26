@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Products.AsyncDataService;
 using Products.Data;
@@ -8,6 +9,7 @@ using Products.Repositories.ProductRepository;
 
 namespace Products.Controllers
 {
+    [Authorize(Roles = "Administrators")]
     [ApiController]
     [Route("[controller]")]
     public class ProductsController : ControllerBase
@@ -18,13 +20,13 @@ namespace Products.Controllers
         private readonly IProductRepository _repo;
         private readonly ILogger<ProductsController> _logger;
 
-        public ProductsController(IProductRepository repo,ILogger<ProductsController> logger, IMapper mapper,IMessageBusClient messageBusClient)
+        public ProductsController(IProductRepository repo, ILogger<ProductsController> logger, IMapper mapper, IMessageBusClient messageBusClient)
         {
-            _messageBusClient=messageBusClient;
+            _messageBusClient = messageBusClient;
             _mapper = mapper;
             _logger = logger;
             _repo = repo;
-        }
+        }        
         [HttpPost("[action]")]
         public async Task<IActionResult> AddProducts(ProductCreate product)
         {                   
