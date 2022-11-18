@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Products/1.0.0": {
+      "products/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.6",
@@ -17,7 +17,7 @@
           "Swashbuckle.AspNetCore": "6.3.1"
         },
         "runtime": {
-          "Products.dll": {}
+          "products.dll": {}
         }
       },
       "AutoMapper/11.0.0": {
@@ -520,7 +520,7 @@
     }
   },
   "libraries": {
-    "Products/1.0.0": {
+    "products/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

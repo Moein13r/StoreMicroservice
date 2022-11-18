@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotApiGetWay", "ApiGatew
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat", "Services\Chat\Chat.csproj", "{3A64E30A-9CFB-4265-A223-CEA557E49874}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "C:\Users\mrahm\source\repos\WpfApp1\WpfApp1.csproj", "{2F750EC4-62B0-4AFA-96D8-D22266370A03}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,10 +53,6 @@ Global
 		{3A64E30A-9CFB-4265-A223-CEA557E49874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A64E30A-9CFB-4265-A223-CEA557E49874}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A64E30A-9CFB-4265-A223-CEA557E49874}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F750EC4-62B0-4AFA-96D8-D22266370A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F750EC4-62B0-4AFA-96D8-D22266370A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F750EC4-62B0-4AFA-96D8-D22266370A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F750EC4-62B0-4AFA-96D8-D22266370A03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

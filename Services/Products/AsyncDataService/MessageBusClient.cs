@@ -13,25 +13,24 @@ namespace Products.AsyncDataService
 
         public MessageBusClient(IConfiguration configuration)
         {
-            _configuration=configuration;
-            var factory=new ConnectionFactory(){HostName=_configuration["RabbitMQHost"], Password = _configuration["Password"], UserName=_configuration["RabbitMQ:UserName"], VirtualHost="/"};
+            _configuration = configuration;
+            var factory = new ConnectionFactory() { HostName = "rabbitmq", Password = "guest", UserName = "guest", VirtualHost = "/"};
             try
             {
                 _connection = factory.CreateConnection();
                 _channel = _connection.CreateModel();
-                _channel.ExchangeDeclare(exchange:"trigger",type: ExchangeType.Direct);
+                _channel.ExchangeDeclare(exchange: "trigger", type: ExchangeType.Direct);
                 _connection.ConnectionShutdown += RabbitMQ_ConnectionShutDown;
             }
             catch (Exception ex)
             {
-                
-                Console.WriteLine("--> could not conntect to message bus");
+                Console.WriteLine("--> could not conntect to message bus{0}",ex.Message);
             }
-        }        
+        }
         public void PublishNewProduct(ProductPublishedDto productPublishedDto)
         {
             var message = JsonSerializer.Serialize(productPublishedDto);
-            if(_connection.IsOpen)
+            if (_connection.IsOpen)
             {
                 Sendmessage(message);
                 Console.WriteLine("--> RaqbbitMq Connection open , Sending Message ...");
@@ -43,11 +42,11 @@ namespace Products.AsyncDataService
         }
         private void Sendmessage(string message)
         {
-            var body=Encoding.UTF8.GetBytes(message);
-            _channel.BasicPublish(exchange:"trigger",routingKey: "",basicProperties: null,body:body);
+            var body = Encoding.UTF8.GetBytes(message);
+            _channel.BasicPublish(exchange: "trigger", routingKey: "", basicProperties: null, body: body);
             Console.WriteLine($"--> We have Sent {message}");
         }
-        private void RabbitMQ_ConnectionShutDown(object sender,ShutdownEventArgs e)
+        private void RabbitMQ_ConnectionShutDown(object sender, ShutdownEventArgs e)
         {
             if (_channel.IsOpen)
             {

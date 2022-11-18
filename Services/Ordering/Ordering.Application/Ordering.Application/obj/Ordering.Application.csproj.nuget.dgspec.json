@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj": {}
+    "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj": {
+    "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj",
         "projectName": "Ordering.Application",
-        "projectPath": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj",
-        "packagesPath": "C:\\Users\\mrahm\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\obj\\",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\Ordering.Application.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Application\\Ordering.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mrahm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22301.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

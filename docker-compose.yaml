@@ -1,8 +1,12 @@
 version: '3.4'
-services:
-  products.api:
+services:   
+  rabbitmq:
+    image: "rabbitmq:3-management"    
+  db:
+    image: "mcr.microsoft.com/mssql/server"  
+  products:
     restart: always
-    image: ${DOCKER_REGISTRY-}productsapi
+    image: ${DOCKER_REGISTRY-}products
     build:
       context: .
       dockerfile: Services/Products/Dockerfile

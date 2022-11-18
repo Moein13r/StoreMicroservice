@@ -8,8 +8,7 @@ using Products.Models;
 using Products.Repositories.ProductRepository;
 
 namespace Products.Controllers
-{
-    [Authorize(Roles = "Administrators")]
+{    
     [ApiController]
     [Route("[controller]")]
     public class ProductsController : ControllerBase
@@ -49,10 +48,38 @@ namespace Products.Controllers
         }
 
         [HttpGet("[action]")]
+        public async Task<ActionResult> ConnectSql(string ConnStr)
+        {
+            try
+            {
+                var eonnection=new Microsoft.Data.SqlClient.SqlConnection(ConnStr);
+                Console.WriteLine("---->Close SuccessFully!");
+                eonnection.Open();
+                await Task.Delay(5000);
+                Console.WriteLine("---->Close SuccessFully!");
+                eonnection.Close();                
+            }   
+            catch(Exception ex)
+            {
+                Console.WriteLine("Sql Exception----->>>"+ex.Message);
+                return Ok( new {Message=ex.Message});
+            }            
+            return Ok();
+        }
+
+        [HttpGet("[action]")]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            var items = _repo.GetAllProducts()?.ToList();
-            return Ok(items);
+            try 
+            {
+                var items = _repo.GetAllProducts()?.ToList();
+                return Ok(items);
+            }   
+            catch(Exception ex)
+            {
+                Console.WriteLine("Sql Exception----->>>"+ex.Message);
+                return Ok( new {Message=ex.Message});
+            }            
         }
         [HttpGet("[action]")]        
         public async Task<ActionResult<Product>> FindProductById(int id)

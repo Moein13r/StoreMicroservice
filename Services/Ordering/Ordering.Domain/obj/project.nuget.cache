@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "26i6SNXYKXYo2wmTqcKRbAyOTLuVkE4vqMCRClDsS911PputELdKlukUwNcI8DlAGeRjdw2h7eh5P6eM+wVJFw==",
+  "dgSpecHash": "ID2oFBAHyClwbjEJb67fJSnHaXQPZUfHIbA1zPkaS5luvtTca97cJgXGSqZwGNdhjTTMS3KKQybAUTkAXZGhRw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
+  "projectFilePath": "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

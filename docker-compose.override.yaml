@@ -1,8 +1,32 @@
 version: '3.4'
 services:
-  products.api:
-    container_name: products.api
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development      
+  rabbitmq:
     ports:
-      - "2112:80"
+      - '4369:4369'
+      - '5671:5671'
+      - '5672:5672'
+      - '25672:25672'
+      - '15692:15692'
+      - '15691:15691'
+      - '15671:15671'
+      - '15672:15672'
+  db:
+    ports:
+      - "14331:1433"
+    environment:      
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: 'Developer'
+      MSSQL_SA_PASSWORD: "Str0ngPa$$w0rd"
+      MSSQL_AGENT_ENABLED: "1"
+    volumes:
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
+      - ./secrets:/var/opt/mssql/secrets
+  products:    
+    ports:
+      - "9001:80" 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - USER_SECRETS_ID=0addbc31-1e5d-43e4-8ffc-9d8b4fcb8d35          
+    user: ${CURRENT_UID}
+   

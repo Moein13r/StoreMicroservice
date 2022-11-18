@@ -8,30 +8,36 @@ namespace Products.AsyncDataService
     public class MessageBusSubScriber : BackgroundService
     {
         private IConfiguration _configuration;
-        private IEventProcessor _eventprocessor;        
+        private IEventProcessor _eventprocessor;
         private IConnection _connection;
         private IModel _channel;
         private string _queueName;
 
-        public MessageBusSubScriber(IConfiguration configuration,IEventProcessor eventprocessor)
+        public MessageBusSubScriber(IConfiguration configuration, IEventProcessor eventprocessor)
         {
-            _configuration=configuration;
-            _eventprocessor=eventprocessor;
+            _configuration = configuration;
+            _eventprocessor = eventprocessor;
             InitializeRabbitMQ();
-            
+
         }
         private void InitializeRabbitMQ()
-        {
+        {            
+            var factory = new ConnectionFactory() { HostName = "rabbitmq", Password = "guest", UserName = "guest",VirtualHost = "/"};
+            try 
+            {
+                _connection = factory.CreateConnection();
+                _channel = _connection.CreateModel();
+                _channel.ExchangeDeclare("trigger", ExchangeType.Direct);
+                _queueName = _channel.QueueDeclare().QueueName;
+                _channel.QueueBind(_queueName, "trigger", "", null);
+                Console.WriteLine("--> Listening On Message bus ...");
 
-            var factory=new ConnectionFactory(){HostName=_configuration["RabbitMQHost"], Password = _configuration["Password"], UserName=_configuration["RabbitMQ:UserName"], VirtualHost="/"};
-            _connection=factory.CreateConnection();
-            _channel = _connection.CreateModel();
-            _channel.ExchangeDeclare("trigger",ExchangeType.Direct);
-            _queueName=_channel.QueueDeclare().QueueName;
-            _channel.QueueBind(_queueName,"trigger","",null);
-            Console.WriteLine("--> Listening On Message bus ...");
-
-            _connection.ConnectionShutdown+=RabbiMQ_ConnectionShutDown;
+                _connection.ConnectionShutdown += RabbiMQ_ConnectionShutDown;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("--> could not conntect to message bus{0}",e.Message);
+            }
 
         }
 
@@ -40,14 +46,14 @@ namespace Products.AsyncDataService
         {
             stoppingToken.ThrowIfCancellationRequested();
             var consumer = new EventingBasicConsumer(_channel);
-            consumer.Received+=(ModuleHandle,ea)=>
-            {                
+            consumer.Received += (ModuleHandle, ea) =>
+            {
                 Console.WriteLine("--> Event Received");
-                var body =ea.Body;
+                var body = ea.Body;
                 var notifcationmessage = Encoding.UTF8.GetString(body.ToArray());
                 _eventprocessor.ProcessEvent(notifcationmessage);
             };
-            _channel.BasicConsume(_queueName,true,consumer);
+            _channel.BasicConsume(_queueName, true, consumer);
             return Task.CompletedTask;
         }
         private void RabbiMQ_ConnectionShutDown(object? sender, ShutdownEventArgs e)

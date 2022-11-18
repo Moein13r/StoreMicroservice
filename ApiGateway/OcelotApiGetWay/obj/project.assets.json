@@ -5,10 +5,14 @@
       "FluentValidation/10.3.6": {
         "type": "package",
         "compile": {
-          "lib/net6.0/FluentValidation.dll": {}
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/FluentValidation.dll": {}
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.AspNetCore.JsonPatch/6.0.1": {
@@ -18,10 +22,14 @@
           "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
-          "lib/net6.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.AspNetCore.MiddlewareAnalysis/6.0.1": {
@@ -30,10 +38,14 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll": {
+            "related": ".xml"
+          }
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -47,10 +59,14 @@
           "Newtonsoft.Json.Bson": "1.0.2"
         },
         "compile": {
-          "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "related": ".xml"
+          }
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -79,10 +95,14 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
@@ -94,19 +114,27 @@
           "System.Diagnostics.DiagnosticSource": "4.7.1"
         },
         "compile": {
-          "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+          "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {}
+          "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.OpenApi/1.2.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.16.1": {
@@ -119,10 +147,14 @@
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json.Bson/1.0.2": {
@@ -131,10 +163,14 @@
           "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Ocelot/18.0.0": {
@@ -170,10 +206,14 @@
           "Microsoft.OpenApi": "1.2.3"
         },
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -185,19 +225,27 @@
           "Swashbuckle.AspNetCore.Swagger": "6.2.3"
         },
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -206,10 +254,14 @@
       "System.Diagnostics.DiagnosticSource/4.7.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -697,24 +749,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mrahm\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\repos\\StoreMicroservice\\ApiGateway\\OcelotApiGetWay\\OcelotApiGetWay.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\ApiGateway\\OcelotApiGetWay\\OcelotApiGetWay.csproj",
       "projectName": "OcelotApiGetWay",
-      "projectPath": "D:\\Projects\\repos\\StoreMicroservice\\ApiGateway\\OcelotApiGetWay\\OcelotApiGetWay.csproj",
-      "packagesPath": "C:\\Users\\mrahm\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\repos\\StoreMicroservice\\ApiGateway\\OcelotApiGetWay\\obj\\",
+      "projectPath": "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\ApiGateway\\OcelotApiGetWay\\OcelotApiGetWay.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\source\\repos\\StoreMicroservice\\ApiGateway\\OcelotApiGetWay\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mrahm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -722,7 +769,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -773,7 +819,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400-preview.22301.10\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

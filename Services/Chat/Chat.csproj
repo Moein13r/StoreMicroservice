@@ -10,6 +10,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Services\**" />
+	  <Content Remove="Services\**" />
+	  <EmbeddedResource Remove="Services\**" />
+	  <None Remove="Services\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
 		<PackageReference Include="HotChocolate.AspNetCore" Version="12.12.1" />
 		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.7" />
@@ -29,7 +36,6 @@
 
 	<ItemGroup>
 		<Folder Include="Models\" />
-		<Folder Include="Services\" />
 	</ItemGroup>
 
 </Project>
